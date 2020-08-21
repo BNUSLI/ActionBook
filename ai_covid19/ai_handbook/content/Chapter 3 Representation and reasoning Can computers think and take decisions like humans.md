@@ -1,0 +1,13 @@
+# Chapter 3 Representation and reasoning: Can computers think and take decisions like humans? ![11](https://img.shields.io/badge/Age-11%2B-blueviolet)
+
+We, humans, learn from our experiences so we can start making decisions. For instance, to learn how to ride a bike, we start learning how to use the bicycle pedals, have balance and use the brakes when needed. After several tries, we can decide when to pedal fast and when to coast, when to apply the brakes and when not. With the advances of technology, researchers are now trying to make computers think, do reasoning and make decisions like humans. Knowledge representation and reasoning is the field of AI aimed to make computers intelligent by representing information about the world in a form that they can use to make reasoning and decisions like humans. For instance, we can give computers the location of several places (e.g., restaurants, shops, etc.) as a data point and then computers can do reasoning to select the shortest path from the current location to the location that the user wants to go to.
+
+Three methods of reasoning are the deductive, inductive, and abductive approaches. Deductive reasoning starts with the assertion of general rule and proceeds from there to a guaranteed specific conclusion. Deductive reasoning moves from the general rule to the specific application: In deductive reasoning, if the original assertions are true, then the conclusion must also be true. For example, math is deductive:
+
+>**if** x = 2<br>**and if** y = 5<br>**then** 3x + y = 11
+
+Inductive reasoning begins with observations that are specific and limited in scope, and proceeds to a generalized conclusion that is likely, but not certain, in light of accumulated evidence. You could say that inductive reasoning moves from the specific to the general. For example, Paul always leaves his home to go to school at 7:00 AM, and he is always on time. Paul then assumes that if he leaves at 7:00 AM for school today, he will be on time.
+
+Abductive reasoning typically begins with an incomplete set of observations and proceeds to the likeliest possible explanation for the set. Abductive reasoning yields the kind of daily decision-making that does its best with the information at hand, which often is incomplete. For example:
+
+>**Premise 1:** You arrived home and were surprised that the front door was open (X)<br>**Premise 2:** However, if your son had arrived home before you, this would be unsurprising (If Y, then unsurprisingly X)<br>**Premise 3:** Therefore, it is reasonable to conclude that your son opened the door. (therefore, presumably Z).
