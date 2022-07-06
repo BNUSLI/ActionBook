@@ -1,6 +1,6 @@
 # ActionBook
 
-> **ActionBook** is developed to facilitate digital textbooks using AI, AR, VR, IoT, etc. This interactive book is the first publication of ActionBook series on <http://actionbook.bnu.edu.cn>
+> **ActionBook** is developed to facilitate digital textbooks using AI, AR, VR, IoT, etc. This interactive book is the first publication of ActionBook series on <https://yuanzhuo.bnu.edu.cn/actionbook>
 
 This book introduces AI to children, between the age of 9 and 15, in an easy and fun way. It also presents vivid stories about some AI-based solutions that were developed to combat the pandemic. Furthermore, this book presents a hands-on learning experience about AI by showing simple programming code that children could use and implement on the JupyterLab environment.
 
