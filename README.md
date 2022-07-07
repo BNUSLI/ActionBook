@@ -82,4 +82,4 @@ This publication is available in Open Access under the Attribution-ShareAlike 3.
 
 ### Contact Us
 
-If you have any issue, please contact us by leaving a message at the end of each page at [ai_handbook](http://actionbook.bnu.edu.cn/ai_handbook). You can also send an e-mail to `yuanzhuo@bnu.edu.cn`.
+If you have any question, please contact us by leaving an issue. You can also send e-mail to `yuanzhuo@bnu.edu.cn`.
