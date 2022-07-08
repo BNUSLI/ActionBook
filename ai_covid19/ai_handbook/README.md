@@ -1,6 +1,6 @@
 # Reading guidelines of the book
 
-> **ActionBook** is developed to facilitate digital textbooks using AI, AR, VR, IoT, etc. This interactive book is the first publication of ActionBook series on <http://actionbook.bnu.edu.cn>
+> **ActionBook** is developed to facilitate digital textbooks using AI, AR, VR, IoT, etc. This interactive book is the first publication of ActionBook series on <https://yuanzhuo.bnu.edu.cn/actionbook>
 
 This book introduces AI to children, between the age of 9 and 15, in an easy and fun way. It also presents vivid stories about some AI-based solutions that were developed to combat the pandemic. Furthermore, this book presents a hands-on learning experience about AI by showing simple programming code that children could use and implement on the JupyterLab environment.
 
@@ -23,7 +23,7 @@ It should be noted that this book can also be read by other people with differen
 ### Use JupyterHub in this interactive book
 
 > [!NOTE]
-> Recommended browser: **Internet Explorer**, **Microsoft Edge** and **Firefox**. If you are using **Google Chrome** of Version > 80(version can be found here <chrome://settings/help>), please go to <chrome://flags/#same-site-by-default-cookies> and choose `disable`.
+> Recommended browser: **Google Chrome**, **Microsoft Edge** and **Firefox**.
 
 The interactive AI-based version of this book, where readers can interact with the presented content and code (test, modify and download it), is powered by [Yuanzhuo Online Code Platform](https://code.yuanzhuo.bnu.edu.cn/).
 
@@ -42,9 +42,9 @@ The Jupyter Notebook is an open-source web application that allows you to create
 
 1.Click [Yuanzhuo Online Code Platform](https://code.yuanzhuo.bnu.edu.cn/)
 
-2.Click Signup
+2.Click ‘联系管理员’ or directly visit [send message](https://yuanzhuo.bnu.edu.cn/message/send/)to **元卓计划** to perform the application.
 
-![signup](http://yuanzhuo.bnu.edu.cn/files/default/2020/07-20/17061359d209570065.png)
+![微信图片_20220708101759](https://md.hass.live/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220708101759.png)
 
 3.Sign in with your username and password
 
@@ -58,13 +58,15 @@ If you want to install other packages, click New-Terminal, we support user insta
 pip3 install --user <package name>
 ```
 
-The pre-installed packages are these:
+We strongly recommend you to use Anaconda private environment
 
-![preinstalled](http://yuanzhuo.bnu.edu.cn/files/default/2020/07-20/170710e14801969185.png)
-
-#### Authorization
-
-When finished the steps above, please **leave a message below with your username**, the administrator will authorize your account with all the code this book needs within 1 hour.
+```bash
+echo 'export PATH=/opt/anaconda/bin:$PATH' >> ~/.bashrc && source ~/.bashrc
+conda create -n myspace
+conda activate myspace
+# to use public kernel, ipykernel is required.
+conda install ipykernel
+```
 
 ---
 
@@ -82,4 +84,4 @@ This publication is available in Open Access under the Attribution-ShareAlike 3.
 
 ### Contact Us
 
-If you have any issue, please contact us by leaving a message at the end of each page. You can also send an e-mail to `yuanzhuo@bnu.edu.cn`.
+If you have any issue, please contact us by sending e-mail to `yuanzhuo@bnu.edu.cn`.

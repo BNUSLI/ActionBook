@@ -1,0 +1,854 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.3 Hands-on learning experience: Face detection · ActionBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="BNUSLI">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mcqx/mcqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fbqx/fbqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-latex-codecogs/latex-codecogs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html" />
+    
+    
+    <link rel="prev" href="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html" />
+    
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://yuanzhuo.bnu.edu.cn/actionbook" target="_blank">Home</a>
+			</li><li>
+				<a href="https://yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Resource Platform</a>
+			</li><li>
+				<a href="https://code.yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Online Code Platform</a>
+			</li><li>
+				<a href="http://yuanzhuo.bnu.edu.cn/article/category/datasets" target="_blank">Datasets</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About This Book
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Preface.html">
+            
+                <a href="Preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Acknowledgement.html">
+            
+                <a href="Acknowledgement.html">
+            
+                    
+                    Acknowledgement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Chapter 1 What is Artificial Intelligence.html">
+            
+                <a href="Chapter 1 What is Artificial Intelligence.html">
+            
+                    
+                    Chapter 1 What is Artificial Intelligence?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Chapter 2 Perception How computers recognize the world like humans do.html">
+            
+                <a href="Chapter 2 Perception How computers recognize the world like humans do.html">
+            
+                    
+                    Chapter 2 Perception: How computers recognize the world like humans do?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19.html">
+            
+                <a href="2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19.html">
+            
+                    
+                    2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html">
+            
+                <a href="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html">
+            
+                    
+                    2.2 Utilizing speech recognition for automatic phone responses during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="2.3 Hands-on learning experience Face detection.html">
+            
+                <a href="2.3 Hands-on learning experience Face detection.html">
+            
+                    
+                    2.3 Hands-on learning experience: Face detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html">
+            
+                <a href="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html">
+            
+                    
+                    Chapter 3 Representation and reasoning: Can computers think and take decisions like humans?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="3.1 Utilizing medical clinic diagnosis during COVID-19.html">
+            
+                <a href="3.1 Utilizing medical clinic diagnosis during COVID-19.html">
+            
+                    
+                    3.1 Utilizing medical clinic diagnosis during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="3.2 Augmented Reality consultation during COVID-19.html">
+            
+                <a href="3.2 Augmented Reality consultation during COVID-19.html">
+            
+                    
+                    3.2 Augmented Reality consultation during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="3.3 Hands-on learning experience Reasoning using decision trees.html">
+            
+                <a href="3.3 Hands-on learning experience Reasoning using decision trees.html">
+            
+                    
+                    3.3 Hands-on learning experience: Reasoning using decision trees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="3.4 Hands-on learning experience Visualizing the Covid-19 data.html">
+            
+                <a href="3.4 Hands-on learning experience Visualizing the Covid-19 data.html">
+            
+                    
+                    3.4 Hands-on learning experience: Visualizing the Covid-19 data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Chapter 4 Learning How do computers learn like humans.html">
+            
+                <a href="Chapter 4 Learning How do computers learn like humans.html">
+            
+                    
+                    Chapter 4 Learning: How do computers learn like humans?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="4.1 Application of machine learning to predict the spread of COVID-19.html">
+            
+                <a href="4.1 Application of machine learning to predict the spread of COVID-19.html">
+            
+                    
+                    4.1 Application of machine learning to predict the spread of COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html">
+            
+                <a href="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html">
+            
+                    
+                    4.2 Application of machine learning to accelerate healthcare solutions during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="4.3 Hands-on learning experience training the machine to perform an action.html">
+            
+                <a href="4.3 Hands-on learning experience training the machine to perform an action.html">
+            
+                    
+                    4.3 Hands-on learning experience: training the machine to perform an action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Chapter 5 Natural interaction Can computers understand humans and talk to them.html">
+            
+                <a href="Chapter 5 Natural interaction Can computers understand humans and talk to them.html">
+            
+                    
+                    Chapter 5 Natural interaction: Can computers understand humans and talk to them?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="5.1 Smart chatbots to answer users’ inquiries about COVID-19.html">
+            
+                <a href="5.1 Smart chatbots to answer users’ inquiries about COVID-19.html">
+            
+                    
+                    5.1 Smart chatbots to answer users’ inquiries about COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.html">
+            
+                <a href="5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.html">
+            
+                    
+                    5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="5.3 Hands-on learning experience Sentence tokenization.html">
+            
+                <a href="5.3 Hands-on learning experience Sentence tokenization.html">
+            
+                    
+                    5.3 Hands-on learning experience: Sentence tokenization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Chapter 6 Social Impact How AI will impact your life.html">
+            
+                <a href="Chapter 6 Social Impact How AI will impact your life.html">
+            
+                    
+                    Chapter 6 Social Impact: How AI will impact your life?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Conclusion.html">
+            
+                <a href="Conclusion.html">
+            
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="References.html">
+            
+                <a href="References.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Aboutus.html">
+            
+                <a href="Aboutus.html">
+            
+                    
+                    About us
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.3 Hands-on learning experience: Face detection</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<h1 id="23-hands-on-learning-experience-face-detection-">2.3 Hands-on learning experience: Face detection <a href="https://img.shields.io/badge/Age-9%2B-brightgreen" data-lightbox="b7079de5-02da-4fbe-81ac-5b978ddbe327" data-title="9" target="_blank"><img src="https://img.shields.io/badge/Age-9%2B-brightgreen" alt="9"></a></h1>
+<p>This section will use a widely popular face detection and manipulation library face-recognition by Adam Geitgey. The images are customized with different colors and border shapes around the detected faces. First, import the useful libraries to our python code.</p>
+<pre><code class="lang-python">import PIL.Image
+import PIL.ImageDraw
+import face_recognition
+</code></pre>
+<p>Please select the image name SchoolKids.jpg (you can pick up any image) in the same folder as the code file or else give the proper path of the image. The selected image would load by the <strong>load_image_file()</strong> method from the face_recognition library which will convert it into a NumPy array of that image. We can then assign it to the variable name given_image. Then assign it to the variable name given_image.</p>
+<pre><code class="lang-python">given_image = face_recognition.load_image_file(&apos;SchoolKids.jpg&apos;)
+</code></pre>
+<p>Using <strong>face_locations()</strong> method from the same library, we will count the number of faces in the given_image and will print the length of total faces found in the image.</p>
+<pre><code class="lang-python">face_locations = face_recognition.face_locations(given_image)
+number_of_faces = len(face_locations)
+print(&quot;We found {} face(s) in this image.&quot;.format(number_of_faces))
+</code></pre>
+<p>Accordingly, to draw any shape on the image, we will convert the image to the Pillow library object using <strong>fromarray()</strong> method from PIL.Image.</p>
+<pre><code class="lang-python">pil_image = PIL.Image.fromarray(given_image)
+</code></pre>
+<p>Then, we will run a for-in loop to print four pixel locations such as top, left, bottom &amp; right of the detected faces.</p>
+<pre><code class="lang-python">for face_location in face_locations:
+top, left, bottom, right = face_location
+print(&quot;A face is detected at pixel location Top: {}, Left: {}, Bottom: {}, --Right:{}&quot;.format(top, left, bottom, right))
+</code></pre>
+<p>We will draw a green color rectangle box with width 10 around the faces.</p>
+<pre><code class="lang-python">draw = PIL.ImageDraw.Draw(pil_image)
+draw.rectangle([left, top, right, bottom],outline=&quot;green&quot;, width=10)
+</code></pre>
+<p>Now, just use the variable pil_image to display our new image with detected faces using a rectangular border around them.</p>
+<pre><code class="lang-python">pil_image.show()
+</code></pre>
+<p>The new temporary image will be open automatically on your computer (if everything is set up correctly). It should be something like Figure 13.</p>
+<p><br></p>
+<p></p><center>
+    <a href="https://md.hass.live/ai13.png" data-lightbox="91a21dd4-0804-4dc5-b031-c04fd277d742" data-title="undefined" target="_blank"><img src="https://md.hass.live/ai13.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">Figure 13. Example of face detection within a given picture</div>
+</center>
+<br><p></p>
+<p>If you run the above file, and everything goes fine, you will get the below output at the console of your editor:</p>
+<pre><code>We found 5 face(s) in this image.
+A face is detected at pixel location Top: 1454, Left: 3451, Bottom: 1775, Right: 3130
+A face is detected at pixel location Top: 1784, Left: 1904, Bottom: 1939, Right: 1749
+A face is detected at pixel location Top: 1818, Left: 2351, Bottom: 1973, Right: 2196
+A face is detected at pixel location Top: 1830, Left: 1529, Bottom: 1959, Right: 1400
+A face is detected at pixel location Top: 1878, Left: 2445, Bottom: 1967, Right: 2355
+</code></pre><h4 id="test">Test</h4>
+<p>Test the code below with username <code>yuanzhuo</code> and password <code>yuanzhuo</code>. Please choose kernel <code>conda-yuanzhuo</code>. Practice more on <a href="https://code.yuanzhuo.bnu.edu.cn/" target="_blank">Yuanzhuo Online Code Platform</a></p>
+<iframe src="https://code.yuanzhuo.bnu.edu.cn/user/yuanzhuo/notebooks/AI%20&#xFF06;%20COVID-19%20Handbook/Chap2/face-exp.ipynb" width="100%" height="980" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h4 id="quiz">Quiz</h4>
+<p></p><div class="mcqx"><div id="3ea2f500125e84c350016a97cf8f533865c3887f" data-config="{&quot;ans&quot;:&quot;o2&quot;,&quot;random&quot;:true,&quot;target&quot;:false,&quot;option&quot;:[{&quot;id&quot;:&quot;o1&quot;,&quot;body&quot;:&quot;Sensors are able to detect noise, heart beats.&quot;},{&quot;id&quot;:&quot;o2&quot;,&quot;body&quot;:&quot;AI enables speech recognition to be realized without converting voice input to something computer can use.&quot;},{&quot;id&quot;:&quot;o3&quot;,&quot;body&quot;:&quot;Facial recognition and speech recognition are realized by AI.&quot;},{&quot;id&quot;:&quot;o4&quot;,&quot;body&quot;:&quot;Speech recognition includes the recognition and translation of spoken language.\r\n&lt;!--&quot;}],&quot;title&quot;:&quot;&lt;p&gt;Please select the incorrect statement:&lt;/p&gt;\n&quot;,&quot;hint&quot;:&quot;Try Again ... --&gt;&quot;,&quot;count&quot;:4,&quot;id&quot;:&quot;3ea2f500125e84c350016a97cf8f533865c3887f&quot;}" data-id="3ea2f500125e84c350016a97cf8f533865c3887f" class="mcqBox gitQuestion"><div class="container-fluid"><div class="MCQtitle"><p>Please select the incorrect statement:</p>
+</div><blockquote><p class="hint_message"></p><label class="radio-inline"><input name="3ea2f500125e84c350016a97cf8f533865c3887f_group" type="radio"><b>A. </b><div class="MCQoption ansHere0"></div></label><br><label class="radio-inline"><input name="3ea2f500125e84c350016a97cf8f533865c3887f_group" type="radio"><b>B. </b><div class="MCQoption ansHere1"></div></label><br><label class="radio-inline"><input name="3ea2f500125e84c350016a97cf8f533865c3887f_group" type="radio"><b>C. </b><div class="MCQoption ansHere2"></div></label><br><label class="radio-inline"><input name="3ea2f500125e84c350016a97cf8f533865c3887f_group" type="radio"><b>D. </b><div class="MCQoption ansHere3"></div></label><br><div class="MCQbutton"><button class="btn btn-default btn-sm submitMCQ">Submit</button><button class="btn btn-default btn-sm hintMCQ">Hint</button></div></blockquote><div class="alert MCQmessage"></div><div class="MCQdescription"></div></div></div></div><p></p>
+<p></p><div class="mcqx"><div id="521ea6449b4d72413143c0cb5877cb7a726905ad" data-config="{&quot;ans&quot;:&quot;o3&quot;,&quot;random&quot;:true,&quot;target&quot;:false,&quot;option&quot;:[{&quot;id&quot;:&quot;o1&quot;,&quot;body&quot;:&quot;Help doctors identify unknown symptoms of individuals.&quot;},{&quot;id&quot;:&quot;o2&quot;,&quot;body&quot;:&quot;Match individuals&#x2019; information without having a known database.&quot;},{&quot;id&quot;:&quot;o3&quot;,&quot;body&quot;:&quot;Identify individuals by their facial characteristics.&quot;},{&quot;id&quot;:&quot;o4&quot;,&quot;body&quot;:&quot;Automatically operate plastic surgeries.\r\n&lt;!--&quot;}],&quot;title&quot;:&quot;&lt;p&gt;What does facial recognition do?&lt;/p&gt;\n&quot;,&quot;hint&quot;:&quot;Try Again ... --&gt;&quot;,&quot;count&quot;:4,&quot;id&quot;:&quot;521ea6449b4d72413143c0cb5877cb7a726905ad&quot;}" data-id="521ea6449b4d72413143c0cb5877cb7a726905ad" class="mcqBox gitQuestion"><div class="container-fluid"><div class="MCQtitle"><p>What does facial recognition do?</p>
+</div><blockquote><p class="hint_message"></p><label class="radio-inline"><input name="521ea6449b4d72413143c0cb5877cb7a726905ad_group" type="radio"><b>A. </b><div class="MCQoption ansHere0"></div></label><br><label class="radio-inline"><input name="521ea6449b4d72413143c0cb5877cb7a726905ad_group" type="radio"><b>B. </b><div class="MCQoption ansHere1"></div></label><br><label class="radio-inline"><input name="521ea6449b4d72413143c0cb5877cb7a726905ad_group" type="radio"><b>C. </b><div class="MCQoption ansHere2"></div></label><br><label class="radio-inline"><input name="521ea6449b4d72413143c0cb5877cb7a726905ad_group" type="radio"><b>D. </b><div class="MCQoption ansHere3"></div></label><br><div class="MCQbutton"><button class="btn btn-default btn-sm submitMCQ">Submit</button><button class="btn btn-default btn-sm hintMCQ">Hint</button></div></blockquote><div class="alert MCQmessage"></div><div class="MCQdescription"></div></div></div></div><p></p>
+<footer class="page-footer"><span class="copyright">&#xA9; Smart Learning Institute of Beijing Normal University (SLIBNU), 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Release Date&#xFF1A;
+2022-07-08
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html" class="navigation navigation-prev " aria-label="Previous page: 2.2 Utilizing speech recognition for automatic phone responses during COVID-19">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html" class="navigation navigation-next " aria-label="Next page: Chapter 3 Representation and reasoning: Can computers think and take decisions like humans?">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"2.3 Hands-on learning experience: Face detection","level":"1.5.3","depth":2,"next":{"title":"Chapter 3 Representation and reasoning: Can computers think and take decisions like humans?","level":"1.6","depth":1,"path":"content/Chapter 3 Representation and reasoning Can computers think and take decisions like humans.md","ref":"content/Chapter 3 Representation and reasoning Can computers think and take decisions like humans.md","articles":[{"title":"3.1 Utilizing medical clinic diagnosis during COVID-19","level":"1.6.1","depth":2,"path":"content/3.1 Utilizing medical clinic diagnosis during COVID-19.md","ref":"content/3.1 Utilizing medical clinic diagnosis during COVID-19.md","articles":[]},{"title":"3.2 Augmented Reality consultation during COVID-19","level":"1.6.2","depth":2,"path":"content/3.2 Augmented Reality consultation during COVID-19.md","ref":"content/3.2 Augmented Reality consultation during COVID-19.md","articles":[]},{"title":"3.3 Hands-on learning experience: Reasoning using decision trees","level":"1.6.3","depth":2,"path":"content/3.3 Hands-on learning experience Reasoning using decision trees.md","ref":"content/3.3 Hands-on learning experience Reasoning using decision trees.md","articles":[]},{"title":"3.4 Hands-on learning experience: Visualizing the Covid-19 data","level":"1.6.4","depth":2,"path":"content/3.4 Hands-on learning experience Visualizing the Covid-19 data.md","ref":"content/3.4 Hands-on learning experience Visualizing the Covid-19 data.md","articles":[]}]},"previous":{"title":"2.2 Utilizing speech recognition for automatic phone responses during COVID-19","level":"1.5.2","depth":2,"path":"content/2.2 Utilizing speech recognition for automatic phone responses during COVID-19.md","ref":"content/2.2 Utilizing speech recognition for automatic phone responses during COVID-19.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","flexible-alerts","advanced-emoji","chapter-fold","code","mcqx","fbqx","spoiler","youtubex","splitter","search-pro","sectionx","klipse","pageview-count","hide-element","popup","sharing-plus","latex-codecogs","lightbox","expandable-chapters-small","-highlight","theme-comscore","baidu-tongji","tbfed-pagefooter","flexible-alerts","js-sequence-diagram-full@>=0.3.1","-sharing","theme-fexa"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Smart Learning Institute of Beijing Normal University (SLIBNU), 2020","modify_label":"Release Date：","modify_format":"YYYY-MM-DD"},"latex-codecogs":{"type":"gif"},"chapter-fold":{},"spoiler":{},"fbqx":{},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"8eb90132f665eaecfd1fe05951de80d3"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"theme-fexa":{"search-placeholder":"","logo":"./logo.png"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes Video:","default":"Embedded video:"}},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":true,"weibo":false,"twitter":true,"pocket":true,"google":false,"qzone":false,"linkedin":true},"mcqx":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"BNUSLI","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://yuanzhuo.bnu.edu.cn/actionbook","target":"_blank","name":"Home"},{"url":"https://yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Resource Platform"},{"url":"https://code.yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Online Code Platform"},{"url":"http://yuanzhuo.bnu.edu.cn/article/category/datasets","target":"_blank","name":"Datasets"}]}},"title":"ActionBook","language":"en","gitbook":"3.2.2","description":"Interactive Book on Artificial Intelligence"},"file":{"path":"content/2.3 Hands-on learning experience Face detection.md","mtime":"2022-07-08T02:20:32.649Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2022-07-08T02:39:30.540Z"},"basePath":"..","book":{"language":"ai_handbook"}});
+		});
+	</script>
+</div>
+
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/js.cookie.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/mcqx.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fbqx/fbqx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,890 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.3 实践学习体验：训练机器执行一个动作 · ActionBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="BNUSLI">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mcqx/mcqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fbqx/fbqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-latex-codecogs/latex-codecogs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="第五章计算机能理解人类并与他们交谈吗.html" />
+    
+    
+    <link rel="prev" href="4.2应用机器学习制定疫情医疗解决方案.html" />
+    
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://yuanzhuo.bnu.edu.cn/actionbook" target="_blank">Home</a>
+			</li><li>
+				<a href="https://yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Resource Platform</a>
+			</li><li>
+				<a href="https://code.yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Online Code Platform</a>
+			</li><li>
+				<a href="https://yuanzhuo.bnu.edu.cn/article/category/datasets" target="_blank">Datasets</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="前言.html">
+            
+                <a href="前言.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="致谢.html">
+            
+                <a href="致谢.html">
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="第一章什么是人工智能.html">
+            
+                <a href="第一章什么是人工智能.html">
+            
+                    
+                    第一章 什么是人工智能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="第二章计算机如何像人类一样认识世界.html">
+            
+                <a href="第二章计算机如何像人类一样认识世界.html">
+            
+                    
+                    第二章 计算机如何像人类一样认识世界?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="2.1在疫情期间利用人脸识别来确认身份.html">
+            
+                <a href="2.1在疫情期间利用人脸识别来确认身份.html">
+            
+                    
+                    2.1 在疫情期间,利用人脸识别来确认身份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="2.2在疫情期间利用语音识别进行自动电话回应.html">
+            
+                <a href="2.2在疫情期间利用语音识别进行自动电话回应.html">
+            
+                    
+                    2.2 在疫情期间,利用语音识别进行电话自动应答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="2.3实践学习体验：人脸识别.html">
+            
+                <a href="2.3实践学习体验：人脸识别.html">
+            
+                    
+                    2.3 实践学习体验：人脸识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="第三章计算机能像人类一样思考吗.html">
+            
+                <a href="第三章计算机能像人类一样思考吗.html">
+            
+                    
+                    第三章 计算机能像人类一样思考吗
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="3.1利用疫情数据进行医疗诊断.html">
+            
+                <a href="3.1利用疫情数据进行医疗诊断.html">
+            
+                    
+                    3.1 利用疫情数据进行医疗诊断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="3.2基于增强现实技术的新冠肺炎病情咨询.html">
+            
+                <a href="3.2基于增强现实技术的新冠肺炎病情咨询.html">
+            
+                    
+                    3.2 基于增强现实技术的新冠肺炎病情咨询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="3.3实践学习体验：使用决策树进行推理.html">
+            
+                <a href="3.3实践学习体验：使用决策树进行推理.html">
+            
+                    
+                    3.3 实践学习体验：使用决策树进行推理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="3.4实践学习体验：疫情数据的可视化.html">
+            
+                <a href="3.4实践学习体验：疫情数据的可视化.html">
+            
+                    
+                    3.4 实践学习体验：新冠疫情数据的可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="第四章计算机如何像人类一样学习.html">
+            
+                <a href="第四章计算机如何像人类一样学习.html">
+            
+                    
+                    第四章 计算机如何像人类一样学习?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="4.1应用机器学习预测新冠疫情的传播情况.html">
+            
+                <a href="4.1应用机器学习预测新冠疫情的传播情况.html">
+            
+                    
+                    4.1 应用机器学习预测新冠疫情的传播情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="4.2应用机器学习制定疫情医疗解决方案.html">
+            
+                <a href="4.2应用机器学习制定疫情医疗解决方案.html">
+            
+                    
+                    4.2 应用机器学习制定疫情医疗解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.3" data-path="4.3实践学习体验：训练机器执行一个动作.html">
+            
+                <a href="4.3实践学习体验：训练机器执行一个动作.html">
+            
+                    
+                    4.3 实践学习体验：训练机器执行一个动作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="第五章计算机能理解人类并与他们交谈吗.html">
+            
+                <a href="第五章计算机能理解人类并与他们交谈吗.html">
+            
+                    
+                    第五章 计算机能理解人类并与他们交谈吗?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="5.1智能聊天机器人回答用户对新冠肺炎疫情的咨询.html">
+            
+                <a href="5.1智能聊天机器人回答用户对新冠肺炎疫情的咨询.html">
+            
+                    
+                    5.1 智能聊天机器人回答用户对新冠肺炎疫情的咨询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="5.2利用文本分析来了解分析网民对新冠疫情的关注.html">
+            
+                <a href="5.2利用文本分析来了解分析网民对新冠疫情的关注.html">
+            
+                    
+                    5.2 利用文本分析来了解分析网民对新冠疫情的关注
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="5.3实践学习体验句子切分.html">
+            
+                <a href="5.3实践学习体验句子切分.html">
+            
+                    
+                    5.3 实践学习体验 句子切分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="第六章人工智能将如何影响你的生活.html">
+            
+                <a href="第六章人工智能将如何影响你的生活.html">
+            
+                    
+                    第六章 人工智能将如何影响你的生活?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="结束语.html">
+            
+                <a href="结束语.html">
+            
+                    
+                    结束语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="引用.html">
+            
+                <a href="引用.html">
+            
+                    
+                    引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="关于我们.html">
+            
+                <a href="关于我们.html">
+            
+                    
+                    关于我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.3 实践学习体验：训练机器执行一个动作</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<h1 id="43-&#x5B9E;&#x8DF5;&#x5B66;&#x4E60;&#x4F53;&#x9A8C;&#xFF1A;&#x8BAD;&#x7EC3;&#x673A;&#x5668;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;-">4.3 &#x5B9E;&#x8DF5;&#x5B66;&#x4E60;&#x4F53;&#x9A8C;&#xFF1A;&#x8BAD;&#x7EC3;&#x673A;&#x5668;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C; <a href="https://img.shields.io/badge/Age-13%2B-9cf" data-lightbox="f59a5d72-9d4a-462d-a680-0416a52c7ffa" data-title="13" target="_blank"><img src="https://img.shields.io/badge/Age-13%2B-9cf" alt="13"></a></h1>
+<p>&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;(CNN)&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x9886;&#x57DF;&#xFF0C;&#x5E76;&#x5728;&#x5404;&#x79CD;&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;&#x4E0A;&#x6210;&#x529F;&#x8FBE;&#x5230;&#x4E86;&#x6700;&#x5148;&#x8FDB;&#x7684;&#x6027;&#x80FD;&#x3002;CNN&#x4E2D;&#x7684;&#x9690;&#x85CF;&#x5C42;&#x4E00;&#x822C;&#x662F;&#x5377;&#x79EF;&#x5C42;&#x548C;&#x6C60;&#x5316;&#x5C42;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x61C2;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x4E00;&#x5C42;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x6A21;&#x5757;&#xFF09;&#x3002;&#x5728;&#x6BCF;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53D6;&#x4E00;&#x4E2A;&#x5C0F;&#x5C3A;&#x5BF8;&#x7684;&#x6EE4;&#x6CE2;&#x5668;&#xFF08;&#x4E5F;&#x79F0;&#x4E3A;&#x5377;&#x79EF;&#x6838;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5C0F;&#x5C3A;&#x5BF8;&#x7684;&#x6743;&#x91CD;&#x77E9;&#x9635;&#xFF09;&#xFF0C;&#x5E76;&#x5C06;&#x8BE5;&#x6EE4;&#x6CE2;&#x5668;&#x5728;&#x56FE;&#x50CF;&#x4E0A;&#x79FB;&#x52A8;&#xFF0C;&#x8FDB;&#x884C;&#x5377;&#x79EF;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#xFF0C;&#x6765;&#x8FBE;&#x5230;&#x51CF;&#x5C11;&#x6837;&#x672C;&#x6570;&#x7684;&#x6548;&#x679C;&#x3002;&#x5377;&#x79EF;&#x8FD0;&#x7B97;&#x505A;&#x6CD5;&#x5C31;&#x662F;&#x5728;&#x8FC7;&#x6EE4;&#x5668;&#x4E2D;&#x7684;&#x6570;&#x503C;&#x548C;&#x56FE;&#x50CF;&#x4E2D;&#x7684;&#x50CF;&#x7D20;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x9010;&#x5143;&#x7D20;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x503C;&#x76F8;&#x52A0;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th><strong>CNN: &#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#xFF08;CNN&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x524D;&#x9988;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#xFF0C;&#x4E00;&#x822C;&#x901A;&#x8FC7;&#x5904;&#x7406;&#x7F51;&#x683C;&#x72B6;&#x62D3;&#x6251;&#x7ED3;&#x6784;&#x7684;&#x6570;&#x636E;&#x6765;&#x5206;&#x6790;&#x89C6;&#x89C9;&#x56FE;&#x50CF;&#x3002;&#x5B83;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;ConvNet&#x3002;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x68C0;&#x6D4B;&#x548C;&#x5206;&#x7C7B;&#x56FE;&#x50CF;&#x4E2D;&#x7684;&#x7269;&#x4F53;&#x3002;</em></td>
+</tr>
+</tbody>
+</table>
+<p>CNN&#x5728;&#x8BA1;&#x7B97;&#x4E0A;&#x4E5F;&#x5F88;&#x6709;&#x6548;&#x7387;&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x7684;&#x5377;&#x79EF;&#x548C;&#x6C60;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;&#x6765;&#x5B9E;&#x73B0;&#x53C2;&#x6570;&#x5171;&#x4EAB;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;CNN&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x8BBE;&#x5907;&#x4E0A;&#x8FD0;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x666E;&#x904D;&#x9752;&#x7750;&#x3002;&#x8FD9;&#x4E00;&#x5207;&#x542C;&#x8D77;&#x6765;&#x90FD;&#x50CF;&#x662F;&#x7EAF;&#x7CB9;&#x7684;&#x9B54;&#x6CD5;&#xFF1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x548C;&#x9AD8;&#x6548;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x5B83;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x975E;&#x4E00;&#x822C;&#x7684;&#x7CBE;&#x5EA6;&#x3002;&#x6240;&#x6709;&#x7684;CNN&#x6A21;&#x578B;&#x90FD;&#x9075;&#x5FAA;&#x7C7B;&#x4F3C;&#x7684;&#x67B6;&#x6784;&#xFF0C;&#x5982;&#x56FE;25&#x6240;&#x793A;&#x3002;</p>
+<p><br></p>
+<p></p><center>
+    <a href="https://md.hass.live/cai25.png" data-lightbox="9638abe8-b54d-403a-8a4b-34b8570c0f05" data-title="undefined" target="_blank"><img src="https://md.hass.live/cai25.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">&#x56FE; 25. &#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7ED3;&#x6784;</div>
+</center>
+<br><p></p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x5B66;&#x4E60;&#x6C60;&#x5316;&#x5C42;&#x3002;&#x6C60;&#x5316;&#x5C42;&#x662F;&#x7528;&#x6765;&#x7F29;&#x5C0F;&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x7684;&#x3002;&#x56FE;&#x50CF;&#x4F1A;&#x5305;&#x542B;&#x5927;&#x91CF;&#x7684;&#x50CF;&#x7D20;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x9010;&#x6B65;&#x7F29;&#x5C0F;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x4F7F;&#x7F51;&#x7EDC;&#x5F88;&#x5BB9;&#x6613;&#x5B66;&#x4E60;&#x5230;&#x7279;&#x5F81;&#x3002;&#x6C60;&#x5316;&#x5C42;&#x6709;&#x52A9;&#x4E8E;&#x51CF;&#x5C11;&#x6240;&#x9700;&#x53C2;&#x6570;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x8FD9;&#x51CF;&#x5C11;&#x4E86;&#x6240;&#x9700;&#x7684;&#x8BA1;&#x7B97;&#x91CF;&#x3002;&#x6709;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6C60;&#x5316;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x3002;</p>
+<ul>
+<li>&#x6700;&#x5927;&#x6C60;&#x5316;&#x2014;&#x2014;&#x9009;&#x62E9;&#x6700;&#x5927;&#x503C;</li>
+<li>&#x5E73;&#x5747;&#x6C60;&#x5316;&#x2014;&#x2014;&#x5C06;&#x6240;&#x6709;&#x6570;&#x503C;&#x76F8;&#x52A0;&#xFF0C;&#x7136;&#x540E;&#x9664;&#x4EE5;&#x6570;&#x503C;&#x603B;&#x6570;</li>
+</ul>
+<p>&#x5728;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x7F16;&#x7801;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x77E5;&#x9053;&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x96C6;&#x662F;MNIST&#x6570;&#x5B57;&#x6570;&#x636E;&#x96C6;&#xFF08;&#x624B;&#x5199;&#x6570;&#x5B57;&#x4E13;&#x7528;&#x6570;&#x636E;&#x96C6;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;Keras&#x5E93;&#x548C;Tensorflow&#x6846;&#x67B6;&#x6765;&#x5EFA;&#x7ACB;&#x6A21;&#x578B;&#x3002;&#x597D;&#x4E86;&#xFF0C;&#x51C6;&#x5907;&#x5145;&#x5206;&#x4E4B;&#x540E;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-python">import keras
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers import Conv2D, MaxPooling2Dimport numpy as np
+</code></pre>
+<p>&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x505A;&#x4E00;&#x4E9B;&#x5FC5;&#x8981;&#x7684;&#x5BFC;&#x5165;&#x3002;keras&#x5E93;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x6784;&#x5EFA;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x8FC7; keras &#x4E0B;&#x8F7D; mnist &#x6570;&#x636E;&#x96C6;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5BFC;&#x5165;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6A21;&#x578B;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x9884;&#x5EFA;&#x7684;keras&#x6A21;&#x578B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;&#x5C42;&#x3002;&#x63A5;&#x7740;&#xFF0C;&#x6211;&#x4EEC;&#x5F15;&#x5165;&#x5377;&#x79EF;&#x5C42;&#x548C;&#x6C60;&#x5316;&#x5C42;&#x3002;&#x6211;&#x4EEC;&#x8FD8;&#x5BFC;&#x5165;&#x4E86;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x662F;&#x7528;&#x6765;&#x9884;&#x6D4B;&#x6807;&#x7B7E;&#x7684;&#x3002;dropout&#x5C42;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x8FC7;&#x62DF;&#x5408;&#xFF0C;&#x6241;&#x5E73;&#x5316;&#x5C42;&#x53EF;&#x4EE5;&#x5C06;&#x4E09;&#x7EF4;&#x5411;&#x91CF;&#x6269;&#x5C55;&#x4E3A;&#x4E00;&#x7EF4;&#x5411;&#x91CF;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5BFC;&#x5165;numpy&#x8FDB;&#x884C;&#x77E9;&#x9635;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-python">batch_size = 128
+num_classes = 10
+epochs = 12
+# input image dimensions
+img_rows, img_cols = 28, 28
+# the data, split between train and test sets
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train = x_train.reshape(60000,28,28,1)
+x_test = x_test.reshape(10000,28,28,1)
+print(&apos;x_train shape:&apos;, x_train.shape)
+print(x_train.shape[0], &apos;train samples&apos;)
+print(x_test.shape[0], &apos;test samples&apos;)
+# convert class vectors to binary class matrices
+y_train = keras.utils.to_categorical(y_train, num_classes)
+y_test = keras.utils.to_categorical(y_test, num_classes)
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x5927;&#x90E8;&#x5206;&#x8BED;&#x53E5;&#x90FD;&#x4F1A;&#x5F88;&#x7410;&#x788E;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x5BF9;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#x884C;&#x8FDB;&#x884C;&#x89E3;&#x91CA;&#x3002;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x91CD;&#x6784;x_train&#x548C;x_test&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x7684;CNN&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x56DB;&#x4E2A;&#x7EF4;&#x5EA6;&#x5411;&#x91CF;&#x3002;&#x503C;60000&#x4EE3;&#x8868;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x56FE;&#x50CF;&#x6570;&#x91CF;&#xFF0C;28&#x4EE3;&#x8868;&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#xFF08;&#x5373;&#x957F;&#x548C;&#x5BBD;&#x90FD;&#x662F;28&#xFF09;&#xFF0C;1&#x4EE3;&#x8868;&#x901A;&#x9053;&#x6570;&#x3002;&#x5982;&#x679C;&#x56FE;&#x50CF;&#x662F;&#x7070;&#x5EA6;&#x7684;&#xFF0C;&#x901A;&#x9053;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;1&#xFF0C;&#x5982;&#x679C;&#x56FE;&#x50CF;&#x662F;RGB&#x683C;&#x5F0F;&#x7684;&#xFF0C;&#x901A;&#x9053;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;3&#x3002;&#x6211;&#x4EEC;&#x8FD8;&#x5C06;&#x76EE;&#x6807;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x7C7B;&#x77E9;&#x9635;&#x3002;&#x8981;&#x60F3;&#x77E5;&#x9053;&#x4E8C;&#x8FDB;&#x5236;&#x7C7B;&#x77E9;&#x9635;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#xFF0C;&#x8BF7;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre><code class="lang-python">model = Sequential()
+model.add(Conv2D(32, kernel_size=(3, 3),  activation=&apos;relu&apos;, input_shape=(28,28,1)))
+model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
+model.add(Flatten())
+model.add(Dense(128, activation=&apos;relu&apos;))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes, activation=&apos;softmax&apos;))
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x5728;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;&#x5377;&#x79EF;&#x5C42;&#x548C;&#x6700;&#x5927;&#x6C60;&#x5316;&#x5C42;&#x3002;&#x6211;&#x4EEC;&#x8FD8;&#x5728;&#x4E2D;&#x95F4;&#x6DFB;&#x52A0;&#x4E86;dropout&#x5C42;&#xFF0C;dropout&#x4F1A;&#x968F;&#x673A;&#x5173;&#x95ED;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x4F20;&#x9012;&#x6570;&#x503C;&#xFF0C;&#x4ECE;&#x800C;&#x8FEB;&#x4F7F;&#x6570;&#x636E;&#x517C;&#x987E;&#x65B0;&#x7684;&#x795E;&#x7ECF;&#x4F20;&#x5BFC;&#x8DEF;&#x5F84;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x4E86;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x6765;&#x6574;&#x7406;&#x6570;&#x503C;&#xFF0C;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x7C7B;&#x522B;&#x9884;&#x6D4B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x731C;&#x6D4B;&#x624B;&#x5199;&#x7684;&#x6570;&#x503C;&#x662F;&#x5426;&#x4E3A;0&#x5230;9&#x7684;&#x6570;&#x5B57;&#x3002;</p>
+<pre><code class="lang-python">model.compile(loss=keras.losses.categorical_crossentropy,              optimizer=keras.optimizers.Adadelta(),  metrics=[&apos;accuracy&apos;])
+model.fit(x_train, y_train,          batch_size=batch_size,          epochs=epochs,          verbose=1,          validation_data=(x_test, y_test))
+score = model.evaluate(x_test, y_test, verbose=0)
+print(&apos;Test loss:&apos;, score[0])
+print(&apos;Test accuracy:&apos;, score[1])
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6570;&#x636E;&#x96C6;&#x62DF;&#x5408;&#x5230;&#x6A21;&#x578B;&#x4E0A;&#xFF0C;&#x5373;&#x6211;&#x4EEC;&#x5BF9;&#x6A21;&#x578B;&#x8FDB;&#x884C;12&#x6B21;&#x8FED;&#x4EE3;&#xFF08;&#x56DE;&#x5408;&#xFF09;&#x7684;&#x8BAD;&#x7EC3;&#x3002;&#x8BAD;&#x7EC3;&#x5B8C;&#x6A21;&#x578B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8BC4;&#x4F30;&#x6A21;&#x578B;&#x5728;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x4E0A;&#x7684;&#x51FD;&#x6570;&#x635F;&#x5931;&#x548C;&#x51C6;&#x786E;&#x6027;&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF08;&#x89C1;&#x56FE;26&#xFF09;.&#x4E5F;&#x5C31;&#x662F;&#x5224;&#x65AD;&#x6BCF;&#x6B21;&#x8F93;&#x5165;&#x7684;&#x624B;&#x5199;&#x6570;&#x5B57;&#xFF0C;&#x6700;&#x540E;&#x731C;&#x6D4B;&#x662F;&#x5426;&#x4E3A;&#x6B63;&#x786E;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#x3002;
+<br></p>
+<p></p><center>
+    <a href="https://md.hass.live/cai26.png" data-lightbox="5b9975de-868b-436d-9dc1-af8f635373b6" data-title="undefined" target="_blank"><img src="https://md.hass.live/cai26.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">&#x56FE; 26. &#x5F97;&#x5230;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;</div>
+</center>
+<br><p></p>
+<h1 id="&#x6D4B;&#x8BD5;">&#x6D4B;&#x8BD5;</h1>
+<p>&#x8BF7;&#x5728;&#x6211;&#x4EEC;&#x7684;jupyter&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x5E76;&#x8FDB;&#x884C;&#x7EC3;&#x4E60;&#xFF0C;&#x9ED8;&#x8BA4;&#x8D26;&#x6237;&#x540D;yuanzhuo&#xFF0C;&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;yuanzhuo. &#x8BF7;&#x5C06;kernel&#x8BBE;&#x7F6E;&#x4E3A;<code>conda-yuanzhuo-tf-chapter4</code>. (<a href="https://code.yuanzhuo.bnu.edu.cn/" target="_blank">https://code.yuanzhuo.bnu.edu.cn/</a>)</p>
+<iframe src="https://code.yuanzhuo.bnu.edu.cn/user/yuanzhuo/notebooks/AI%20&#xFF06;%20COVID-19%20Handbook/Chap4/CNN.ipynb" width="100%" height="980" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h1 id="&#x6D4B;&#x9A8C;">&#x6D4B;&#x9A8C;</h1>
+<p></p><div class="mcqx"><div id="cc7335b752902b283339add73fd00308feb0c1ad" data-config="{&quot;ans&quot;:&quot;o4&quot;,&quot;random&quot;:true,&quot;target&quot;:false,&quot;option&quot;:[{&quot;id&quot;:&quot;o1&quot;,&quot;body&quot;:&quot;&#x53EA;&#x6709;&#x5F53;&#x5B83;&#x88AB;&#x6559;&#x7ED9;&#x4E00;&#x4E9B;&#x4E8B;&#x5148;&#x88AB;&#x6807;&#x8BB0;&#x7684;&#x77E5;&#x8BC6;&#x65F6;&#xFF0C;&#x5B83;&#x624D;&#x4F1A;&#x9884;&#x6D4B;&#x672A;&#x6765;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&quot;},{&quot;id&quot;:&quot;o2&quot;,&quot;body&quot;:&quot;&#x5B83;&#x6839;&#x636E;&#x5C11;&#x91CF;&#x6570;&#x636E;&#x9884;&#x6D4B;&#x51C6;&#x786E;&#x7684;&#x6A21;&#x5F0F;&#x3002;&quot;},{&quot;id&quot;:&quot;o3&quot;,&quot;body&quot;:&quot;&#x53EA;&#x6709;&#x5728;&#x4EA4;&#x4E92;&#x5F0F;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x5B83;&#x624D;&#x4F1A;&#x4F7F;&#x7528;&#x975E;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x6765;&#x751F;&#x6210;&#x65B0;&#x7684;&#x6A21;&#x5F0F;&#x3002;&quot;},{&quot;id&quot;:&quot;o4&quot;,&quot;body&quot;:&quot;&#x5B83;&#x5728;&#x8FDE;&#x7EED;&#x7684;&#x5C42;&#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#xFF0C;&#x4EE5;&#x4FBF;&#x4EE5;&#x8FED;&#x4EE3;&#x7684;&#x65B9;&#x5F0F;&#x4ECE;&#x6570;&#x636E;&#x4E2D;&#x5B66;&#x4E60;&#x3002;\n&lt;!--&quot;}],&quot;title&quot;:&quot;&lt;p&gt;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;?&lt;/p&gt;\n&quot;,&quot;hint&quot;:&quot;&#x518D;&#x8BD5;&#x4E00;&#x6B21; ... --&gt;&quot;,&quot;count&quot;:4,&quot;id&quot;:&quot;cc7335b752902b283339add73fd00308feb0c1ad&quot;}" data-id="cc7335b752902b283339add73fd00308feb0c1ad" class="mcqBox gitQuestion"><div class="container-fluid"><div class="MCQtitle"><p>&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;?</p>
+</div><blockquote><p class="hint_message"></p><label class="radio-inline"><input name="cc7335b752902b283339add73fd00308feb0c1ad_group" type="radio"><b>A. </b><div class="MCQoption ansHere0"></div></label><br><label class="radio-inline"><input name="cc7335b752902b283339add73fd00308feb0c1ad_group" type="radio"><b>B. </b><div class="MCQoption ansHere1"></div></label><br><label class="radio-inline"><input name="cc7335b752902b283339add73fd00308feb0c1ad_group" type="radio"><b>C. </b><div class="MCQoption ansHere2"></div></label><br><label class="radio-inline"><input name="cc7335b752902b283339add73fd00308feb0c1ad_group" type="radio"><b>D. </b><div class="MCQoption ansHere3"></div></label><br><div class="MCQbutton"><button class="btn btn-default btn-sm submitMCQ">Submit</button><button class="btn btn-default btn-sm hintMCQ">Hint</button></div></blockquote><div class="alert MCQmessage"></div><div class="MCQdescription"></div></div></div></div><p></p>
+<p></p><div class="mcqx"><div id="a0e39fba34db19617cb268822cfee8c4508ab113" data-config="{&quot;ans&quot;:&quot;o3&quot;,&quot;random&quot;:true,&quot;target&quot;:false,&quot;option&quot;:[{&quot;id&quot;:&quot;o1&quot;,&quot;body&quot;:&quot;CNN&#x4E2D;&#x7684;&#x9690;&#x85CF;&#x5C42;&#x4E00;&#x822C;&#x662F;&#x5377;&#x79EF;&#x5C42;&#x548C;&#x6C60;&#x5316;&#x5C42;&#x3002;&quot;},{&quot;id&quot;:&quot;o2&quot;,&quot;body&quot;:&quot;CNN&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x89C6;&#x89C9;&#x56FE;&#x50CF;&#x3002;&quot;},{&quot;id&quot;:&quot;o3&quot;,&quot;body&quot;:&quot;CNN&#x7684;&#x6C60;&#x5316;&#x5C42;&#x662F;&#x4E3A;&#x4E86;&#x589E;&#x5F3A;&#x6570;&#x636E;&#x7684;&#x6837;&#x672C;&#x3002;&quot;},{&quot;id&quot;:&quot;o4&quot;,&quot;body&quot;:&quot;CNN&#x5229;&#x7528;&#x8F83;&#x5C0F;&#x548C;&#x8F83;&#x7B80;&#x5355;&#x7684;&#x6A21;&#x5F0F;&#x7EC4;&#x88C5;&#x590D;&#x6742;&#x7684;&#x6A21;&#x5F0F;&#x3002;\n&lt;!--&quot;}],&quot;title&quot;:&quot;&lt;p&gt;&#x5173;&#x4E8E;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;(CNN)&#xFF0C;&#x54EA;&#x9879;&#x8BF4;&#x6CD5;&#x4E0D;&#x6B63;&#x786E;?&lt;/p&gt;\n&quot;,&quot;hint&quot;:&quot;&#x518D;&#x6B21;&#x4E00;&#x6B21; ... --&gt;&quot;,&quot;count&quot;:4,&quot;id&quot;:&quot;a0e39fba34db19617cb268822cfee8c4508ab113&quot;}" data-id="a0e39fba34db19617cb268822cfee8c4508ab113" class="mcqBox gitQuestion"><div class="container-fluid"><div class="MCQtitle"><p>&#x5173;&#x4E8E;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;(CNN)&#xFF0C;&#x54EA;&#x9879;&#x8BF4;&#x6CD5;&#x4E0D;&#x6B63;&#x786E;?</p>
+</div><blockquote><p class="hint_message"></p><label class="radio-inline"><input name="a0e39fba34db19617cb268822cfee8c4508ab113_group" type="radio"><b>A. </b><div class="MCQoption ansHere0"></div></label><br><label class="radio-inline"><input name="a0e39fba34db19617cb268822cfee8c4508ab113_group" type="radio"><b>B. </b><div class="MCQoption ansHere1"></div></label><br><label class="radio-inline"><input name="a0e39fba34db19617cb268822cfee8c4508ab113_group" type="radio"><b>C. </b><div class="MCQoption ansHere2"></div></label><br><label class="radio-inline"><input name="a0e39fba34db19617cb268822cfee8c4508ab113_group" type="radio"><b>D. </b><div class="MCQoption ansHere3"></div></label><br><div class="MCQbutton"><button class="btn btn-default btn-sm submitMCQ">Submit</button><button class="btn btn-default btn-sm hintMCQ">Hint</button></div></blockquote><div class="alert MCQmessage"></div><div class="MCQdescription"></div></div></div></div><p></p>
+<footer class="page-footer"><span class="copyright">&#xA9; Smart Learning Institute of Beijing Normal University (SLIBNU), 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Release Date&#xFF1A;
+2022-07-08
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="4.2应用机器学习制定疫情医疗解决方案.html" class="navigation navigation-prev " aria-label="Previous page: 4.2 应用机器学习制定疫情医疗解决方案">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="第五章计算机能理解人类并与他们交谈吗.html" class="navigation navigation-next " aria-label="Next page: 第五章 计算机能理解人类并与他们交谈吗?">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"4.3 实践学习体验：训练机器执行一个动作","level":"1.7.3","depth":2,"next":{"title":"第五章 计算机能理解人类并与他们交谈吗?","level":"1.8","depth":1,"path":"content/第五章计算机能理解人类并与他们交谈吗.md","ref":"content/第五章计算机能理解人类并与他们交谈吗.md","articles":[{"title":"5.1 智能聊天机器人回答用户对新冠肺炎疫情的咨询","level":"1.8.1","depth":2,"path":"content/5.1智能聊天机器人回答用户对新冠肺炎疫情的咨询.md","ref":"content/5.1智能聊天机器人回答用户对新冠肺炎疫情的咨询.md","articles":[]},{"title":"5.2 利用文本分析来了解分析网民对新冠疫情的关注","level":"1.8.2","depth":2,"path":"content/5.2利用文本分析来了解分析网民对新冠疫情的关注.md","ref":"content/5.2利用文本分析来了解分析网民对新冠疫情的关注.md","articles":[]},{"title":"5.3 实践学习体验 句子切分","level":"1.8.3","depth":2,"path":"content/5.3实践学习体验句子切分.md","ref":"content/5.3实践学习体验句子切分.md","articles":[]}]},"previous":{"title":"4.2 应用机器学习制定疫情医疗解决方案","level":"1.7.2","depth":2,"path":"content/4.2应用机器学习制定疫情医疗解决方案.md","ref":"content/4.2应用机器学习制定疫情医疗解决方案.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","flexible-alerts","advanced-emoji","chapter-fold","code","mcqx","fbqx","spoiler","youtubex","splitter","search-pro","sectionx","klipse","pageview-count","hide-element","popup","sharing-plus","latex-codecogs","lightbox","expandable-chapters-small","-highlight","theme-comscore","baidu-tongji","tbfed-pagefooter","flexible-alerts","js-sequence-diagram-full@>=0.3.1","-sharing","theme-fexa"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Smart Learning Institute of Beijing Normal University (SLIBNU), 2020","modify_label":"Release Date：","modify_format":"YYYY-MM-DD"},"latex-codecogs":{"type":"gif"},"chapter-fold":{},"spoiler":{},"fbqx":{},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"8eb90132f665eaecfd1fe05951de80d3"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"theme-fexa":{"search-placeholder":"","logo":"./logo.png"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes Video:","default":"Embedded video:"}},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":true,"weibo":false,"twitter":true,"pocket":true,"google":false,"qzone":false,"linkedin":true},"mcqx":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"BNUSLI","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://yuanzhuo.bnu.edu.cn/actionbook","target":"_blank","name":"Home"},{"url":"https://yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Resource Platform"},{"url":"https://code.yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Online Code Platform"},{"url":"https://yuanzhuo.bnu.edu.cn/article/category/datasets","target":"_blank","name":"Datasets"}]}},"title":"ActionBook","language":"en","gitbook":"3.2.2","description":"Interactive Book on Artificial Intelligence"},"file":{"path":"content/4.3实践学习体验：训练机器执行一个动作.md","mtime":"2022-07-08T01:47:57.297Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2022-07-08T02:39:30.540Z"},"basePath":"..","book":{"language":"ai_handbook_cn"}});
+		});
+	</script>
+</div>
+
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/js.cookie.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/mcqx.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fbqx/fbqx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+
+    </body>
+</html>
+

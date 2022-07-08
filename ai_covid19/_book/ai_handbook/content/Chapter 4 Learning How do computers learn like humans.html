@@ -1,0 +1,899 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Chapter 4 Learning: How do computers learn like humans? · ActionBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="BNUSLI">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mcqx/mcqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fbqx/fbqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-latex-codecogs/latex-codecogs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.1 Application of machine learning to predict the spread of COVID-19.html" />
+    
+    
+    <link rel="prev" href="3.4 Hands-on learning experience Visualizing the Covid-19 data.html" />
+    
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://yuanzhuo.bnu.edu.cn/actionbook" target="_blank">Home</a>
+			</li><li>
+				<a href="https://yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Resource Platform</a>
+			</li><li>
+				<a href="https://code.yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Online Code Platform</a>
+			</li><li>
+				<a href="http://yuanzhuo.bnu.edu.cn/article/category/datasets" target="_blank">Datasets</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About This Book
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Preface.html">
+            
+                <a href="Preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Acknowledgement.html">
+            
+                <a href="Acknowledgement.html">
+            
+                    
+                    Acknowledgement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Chapter 1 What is Artificial Intelligence.html">
+            
+                <a href="Chapter 1 What is Artificial Intelligence.html">
+            
+                    
+                    Chapter 1 What is Artificial Intelligence?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Chapter 2 Perception How computers recognize the world like humans do.html">
+            
+                <a href="Chapter 2 Perception How computers recognize the world like humans do.html">
+            
+                    
+                    Chapter 2 Perception: How computers recognize the world like humans do?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19.html">
+            
+                <a href="2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19.html">
+            
+                    
+                    2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html">
+            
+                <a href="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html">
+            
+                    
+                    2.2 Utilizing speech recognition for automatic phone responses during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="2.3 Hands-on learning experience Face detection.html">
+            
+                <a href="2.3 Hands-on learning experience Face detection.html">
+            
+                    
+                    2.3 Hands-on learning experience: Face detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html">
+            
+                <a href="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html">
+            
+                    
+                    Chapter 3 Representation and reasoning: Can computers think and take decisions like humans?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="3.1 Utilizing medical clinic diagnosis during COVID-19.html">
+            
+                <a href="3.1 Utilizing medical clinic diagnosis during COVID-19.html">
+            
+                    
+                    3.1 Utilizing medical clinic diagnosis during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="3.2 Augmented Reality consultation during COVID-19.html">
+            
+                <a href="3.2 Augmented Reality consultation during COVID-19.html">
+            
+                    
+                    3.2 Augmented Reality consultation during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="3.3 Hands-on learning experience Reasoning using decision trees.html">
+            
+                <a href="3.3 Hands-on learning experience Reasoning using decision trees.html">
+            
+                    
+                    3.3 Hands-on learning experience: Reasoning using decision trees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="3.4 Hands-on learning experience Visualizing the Covid-19 data.html">
+            
+                <a href="3.4 Hands-on learning experience Visualizing the Covid-19 data.html">
+            
+                    
+                    3.4 Hands-on learning experience: Visualizing the Covid-19 data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="Chapter 4 Learning How do computers learn like humans.html">
+            
+                <a href="Chapter 4 Learning How do computers learn like humans.html">
+            
+                    
+                    Chapter 4 Learning: How do computers learn like humans?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="4.1 Application of machine learning to predict the spread of COVID-19.html">
+            
+                <a href="4.1 Application of machine learning to predict the spread of COVID-19.html">
+            
+                    
+                    4.1 Application of machine learning to predict the spread of COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html">
+            
+                <a href="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html">
+            
+                    
+                    4.2 Application of machine learning to accelerate healthcare solutions during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="4.3 Hands-on learning experience training the machine to perform an action.html">
+            
+                <a href="4.3 Hands-on learning experience training the machine to perform an action.html">
+            
+                    
+                    4.3 Hands-on learning experience: training the machine to perform an action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Chapter 5 Natural interaction Can computers understand humans and talk to them.html">
+            
+                <a href="Chapter 5 Natural interaction Can computers understand humans and talk to them.html">
+            
+                    
+                    Chapter 5 Natural interaction: Can computers understand humans and talk to them?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="5.1 Smart chatbots to answer users’ inquiries about COVID-19.html">
+            
+                <a href="5.1 Smart chatbots to answer users’ inquiries about COVID-19.html">
+            
+                    
+                    5.1 Smart chatbots to answer users’ inquiries about COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.html">
+            
+                <a href="5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.html">
+            
+                    
+                    5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="5.3 Hands-on learning experience Sentence tokenization.html">
+            
+                <a href="5.3 Hands-on learning experience Sentence tokenization.html">
+            
+                    
+                    5.3 Hands-on learning experience: Sentence tokenization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Chapter 6 Social Impact How AI will impact your life.html">
+            
+                <a href="Chapter 6 Social Impact How AI will impact your life.html">
+            
+                    
+                    Chapter 6 Social Impact: How AI will impact your life?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Conclusion.html">
+            
+                <a href="Conclusion.html">
+            
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="References.html">
+            
+                <a href="References.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Aboutus.html">
+            
+                <a href="Aboutus.html">
+            
+                    
+                    About us
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Chapter 4 Learning: How do computers learn like humans?</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<h1 id="chapter-4-learning-how-do-computers-learn-like-humans-">Chapter 4 Learning: How do computers learn like humans? <a href="https://img.shields.io/badge/Age-13%2B-9cf" data-lightbox="ea3f14c5-0405-42a2-8146-a2d719757ea1" data-title="13" target="_blank"><img src="https://img.shields.io/badge/Age-13%2B-9cf" alt="13"></a></h1>
+<p>While humans learn from their past experiences, computers can learn from data rather than through explicit programming. This is known as machine learning. Machine learning uses a variety of algorithms that iteratively learn from data to improve, describe data, and predict outcomes. For instance, as shown in Figure 18, in an online shopping website, the machine will learn the preferences or choices of a particular customer by recording the products that he/she has bought or went through. It will then start recommending to the customer based on these preferences.</p>
+<p><br></p>
+<center>
+    <a href="https://md.hass.live/ai20.png" data-lightbox="e22fe78c-f59a-4195-8f8a-041d6a7b69eb" data-title="undefined" target="_blank"><img src="https://md.hass.live/ai20.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">Figure 20. A computer learning about a shopper from his data</div>
+</center>
+<br>
+
+In machine learning, four types of learning could be implemented:
+
+1.**Supervised learning**: In this learning type, the machine learning model is taught some knowledge in advance so it can predict future instances. To simplify this definition, we want the machine to know if the student X is a hardworking, good or lazy student based on: **(1)** how many learning hours he/she spends per day; **(2)** how many hours he/she watches the TV. As we mentioned, we need to first teach the machine; in this case we have to give it previous knowledge (also known as labeled dataset) about other students, as shown in Table 1. As you can see in the knowledge given in Table 1, the type of student is known (hard working, good, lazy). The machine will first learn from this knowledge. It will then classify any new student (for instance, our student X) based on how many hours, he/she spent learning and watching TV.
+
+<center>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">Table 1. Example of knowledge information (also known as labeled dataset) to classify a student</div>
+</center>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Student</th>
+<th style="text-align:center">Learning hours</th>
+<th style="text-align:center">TV watching hours</th>
+<th style="text-align:center">Type of student</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Adam</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Hard working</td>
+</tr>
+<tr>
+<td style="text-align:center">Sarra</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Good student</td>
+</tr>
+<tr>
+<td style="text-align:center">Charlie</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lazy student</td>
+</tr>
+</tbody>
+</table>
+<p>2.<strong>Unsupervised learning</strong>: In this learning type, we do not teach the machine learning model (like in the first case). Hence, the machine will work on unlabeled data and it will classify or cluster this data based on similar patterns or features.</p>
+<p>3.<strong>Reinforcement learning</strong>: In this learning type, an agent will be within an interactive environment and in a specific state. It will then learn from its own actions and experiences by trial and error using feedback from the environment. To simplify this, we take the example of &#x201C;fetch the ball&#x201D; game between the dog and its owner (See Figure 19). The dog (agent) will be in the garden with its owner (interactive environment) where the owner throws the ball (state). The dog (agent) has to perform an action which could be running after the ball or not. If the dog fetches the ball (action), its owner (interactive environment) will reward him by giving him food, in this way the dog (agent) will know that he is doing the right action and he should keep doing that. If the dog does not bring the ball (action), its owner will not give him food. In this way, the dog (agent) will know that it is doing the wrong action, and it should go bring the ball (correct action)</p>
+<p><br></p>
+<p></p><center>
+    <a href="https://md.hass.live/ai21.png" data-lightbox="c871d890-d778-4000-b847-9b06c3af1143" data-title="undefined" target="_blank"><img src="https://md.hass.live/ai21.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">Figure 21. &#x201C;Fetch the ball&#x201D; game between the dog and its owner</div>
+</center>
+<br><p></p>
+<p>4.<strong>Deep learning</strong>: Deep learning is a specific method of machine learning that incorporates neural networks in successive layers in order to learn from data in an iterative manner. Deep learning is especially useful when you are trying to learn patterns from unstructured data.</p>
+<p>Just like we have seen above, machine learning can learn and make predictions based on the given data. Therefore, it is important to give the machine: <strong>(1)</strong> good quality data: which means accurate and correct data that can help the machine takes correct decisions; and, <strong>(2)</strong> big amount of data which can help the machine learns several information that can help it perform several actions and decisions. To simplify this, we can consider the machine as the &#x201C;car&#x201D; and the data as the &#x201C;fuel&#x201D; (See Figure 20). So, the car cannot work without the fuel, same for the machine, it cannot work without the data. Also, if we give too much good quality fuel to the car, the engine then will not be harmed and the car can take us on a long trip. Same for the machine, accurate data, will not harm the machine and make it take correct decisions, and too much data will make it take several decisions or predictions.</p>
+<p><br></p>
+<p></p><center>
+    <a href="https://md.hass.live/ai22.png" data-lightbox="81d6684c-a4cd-4736-828b-bc588e47cfc5" data-title="undefined" target="_blank"><img src="https://md.hass.live/ai22.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">Figure 22. Importance of data for machine learning</div>
+</center>
+<br><p></p>
+<table>
+<thead>
+<tr>
+<th><strong>Computer (/k&#x259;m&#x2C8;pyut&#x259;r/) data (/&#x2C8;de&#x26A;t&#x259;, &#x2C8;d&#xE6;t&#x259;, &#x2C8;d&#x251;t&#x259;/)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Computer data is information processed or stored by a computer. This information can be in different forms, such as text, audio, or image. Computer data is processed by the computer&apos;s Central Processing Uunit (CPU) and can be stored on the computer&apos;s hard disk or online, on the cloud.</em></td>
+</tr>
+</tbody>
+</table>
+<p>There is an urgent need for hospitals and relevant departments at all levels to establish interactive information interfaces and connections, as well as a platform for all parties to collaborate and share information in real time, so that information and data can be shared among medical institutions and between medical institutions and regional administrative departments in accordance with their mandates, providing an effective basis for management and decision-making. In this context, the most important thing is to provide a unified and structured data platform, so that doctors and researchers can easily access to international and updated data. For instance, as shown in Figure 21, COVID-19 surveillance platform was established by Ningbo medical health committee, China in the early 2020, and it could be used to monitor the 4000 medical institutions in Ningbo. All of the data, such confirmed cases, age of infected patients, etc. come from the Yindu Cloud in China.</p>
+<p><br></p>
+<p></p><center>
+    <a href="https://md.hass.live/ai23.png" data-lightbox="937f5c2a-2d7e-4bcb-b3d9-48afbe511dab" data-title="undefined" target="_blank"><img src="https://md.hass.live/ai23.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">Figure 23. COVID-19 surveillance platform, established by Ningbo medical health committee</div>
+</center>
+<br><p></p>
+<footer class="page-footer"><span class="copyright">&#xA9; Smart Learning Institute of Beijing Normal University (SLIBNU), 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Release Date&#xFF1A;
+2022-07-06
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="3.4 Hands-on learning experience Visualizing the Covid-19 data.html" class="navigation navigation-prev " aria-label="Previous page: 3.4 Hands-on learning experience: Visualizing the Covid-19 data">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="4.1 Application of machine learning to predict the spread of COVID-19.html" class="navigation navigation-next " aria-label="Next page: 4.1 Application of machine learning to predict the spread of COVID-19">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"Chapter 4 Learning: How do computers learn like humans?","level":"1.7","depth":1,"next":{"title":"4.1 Application of machine learning to predict the spread of COVID-19","level":"1.7.1","depth":2,"path":"content/4.1 Application of machine learning to predict the spread of COVID-19.md","ref":"content/4.1 Application of machine learning to predict the spread of COVID-19.md","articles":[]},"previous":{"title":"3.4 Hands-on learning experience: Visualizing the Covid-19 data","level":"1.6.4","depth":2,"path":"content/3.4 Hands-on learning experience Visualizing the Covid-19 data.md","ref":"content/3.4 Hands-on learning experience Visualizing the Covid-19 data.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","flexible-alerts","advanced-emoji","chapter-fold","code","mcqx","fbqx","spoiler","youtubex","splitter","search-pro","sectionx","klipse","pageview-count","hide-element","popup","sharing-plus","latex-codecogs","lightbox","expandable-chapters-small","-highlight","theme-comscore","baidu-tongji","tbfed-pagefooter","flexible-alerts","js-sequence-diagram-full@>=0.3.1","-sharing","theme-fexa"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Smart Learning Institute of Beijing Normal University (SLIBNU), 2020","modify_label":"Release Date：","modify_format":"YYYY-MM-DD"},"latex-codecogs":{"type":"gif"},"chapter-fold":{},"spoiler":{},"fbqx":{},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"8eb90132f665eaecfd1fe05951de80d3"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"theme-fexa":{"search-placeholder":"","logo":"./logo.png"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes Video:","default":"Embedded video:"}},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":true,"weibo":false,"twitter":true,"pocket":true,"google":false,"qzone":false,"linkedin":true},"mcqx":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"BNUSLI","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://yuanzhuo.bnu.edu.cn/actionbook","target":"_blank","name":"Home"},{"url":"https://yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Resource Platform"},{"url":"https://code.yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Online Code Platform"},{"url":"http://yuanzhuo.bnu.edu.cn/article/category/datasets","target":"_blank","name":"Datasets"}]}},"title":"ActionBook","language":"en","gitbook":"3.2.2","description":"Interactive Book on Artificial Intelligence"},"file":{"path":"content/Chapter 4 Learning How do computers learn like humans.md","mtime":"2022-07-06T07:39:17.941Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2022-07-08T02:39:30.540Z"},"basePath":"..","book":{"language":"ai_handbook"}});
+		});
+	</script>
+</div>
+
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/js.cookie.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/mcqx.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fbqx/fbqx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+
+    </body>
+</html>
+

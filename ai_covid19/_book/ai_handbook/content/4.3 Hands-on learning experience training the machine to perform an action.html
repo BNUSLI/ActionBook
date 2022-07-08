@@ -1,0 +1,890 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.3 Hands-on learning experience: training the machine to perform an action · ActionBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="BNUSLI">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mcqx/mcqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fbqx/fbqx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-latex-codecogs/latex-codecogs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Chapter 5 Natural interaction Can computers understand humans and talk to them.html" />
+    
+    
+    <link rel="prev" href="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html" />
+    
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://yuanzhuo.bnu.edu.cn/actionbook" target="_blank">Home</a>
+			</li><li>
+				<a href="https://yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Resource Platform</a>
+			</li><li>
+				<a href="https://code.yuanzhuo.bnu.edu.cn" target="_blank">Yuanzhuo Online Code Platform</a>
+			</li><li>
+				<a href="http://yuanzhuo.bnu.edu.cn/article/category/datasets" target="_blank">Datasets</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About This Book
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Preface.html">
+            
+                <a href="Preface.html">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Acknowledgement.html">
+            
+                <a href="Acknowledgement.html">
+            
+                    
+                    Acknowledgement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Chapter 1 What is Artificial Intelligence.html">
+            
+                <a href="Chapter 1 What is Artificial Intelligence.html">
+            
+                    
+                    Chapter 1 What is Artificial Intelligence?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Chapter 2 Perception How computers recognize the world like humans do.html">
+            
+                <a href="Chapter 2 Perception How computers recognize the world like humans do.html">
+            
+                    
+                    Chapter 2 Perception: How computers recognize the world like humans do?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19.html">
+            
+                <a href="2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19.html">
+            
+                    
+                    2.1 Utilizing face recognition for tracking quarantine evaders during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html">
+            
+                <a href="2.2 Utilizing speech recognition for automatic phone responses during COVID-19.html">
+            
+                    
+                    2.2 Utilizing speech recognition for automatic phone responses during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="2.3 Hands-on learning experience Face detection.html">
+            
+                <a href="2.3 Hands-on learning experience Face detection.html">
+            
+                    
+                    2.3 Hands-on learning experience: Face detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html">
+            
+                <a href="Chapter 3 Representation and reasoning Can computers think and take decisions like humans.html">
+            
+                    
+                    Chapter 3 Representation and reasoning: Can computers think and take decisions like humans?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="3.1 Utilizing medical clinic diagnosis during COVID-19.html">
+            
+                <a href="3.1 Utilizing medical clinic diagnosis during COVID-19.html">
+            
+                    
+                    3.1 Utilizing medical clinic diagnosis during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="3.2 Augmented Reality consultation during COVID-19.html">
+            
+                <a href="3.2 Augmented Reality consultation during COVID-19.html">
+            
+                    
+                    3.2 Augmented Reality consultation during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="3.3 Hands-on learning experience Reasoning using decision trees.html">
+            
+                <a href="3.3 Hands-on learning experience Reasoning using decision trees.html">
+            
+                    
+                    3.3 Hands-on learning experience: Reasoning using decision trees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="3.4 Hands-on learning experience Visualizing the Covid-19 data.html">
+            
+                <a href="3.4 Hands-on learning experience Visualizing the Covid-19 data.html">
+            
+                    
+                    3.4 Hands-on learning experience: Visualizing the Covid-19 data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Chapter 4 Learning How do computers learn like humans.html">
+            
+                <a href="Chapter 4 Learning How do computers learn like humans.html">
+            
+                    
+                    Chapter 4 Learning: How do computers learn like humans?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="4.1 Application of machine learning to predict the spread of COVID-19.html">
+            
+                <a href="4.1 Application of machine learning to predict the spread of COVID-19.html">
+            
+                    
+                    4.1 Application of machine learning to predict the spread of COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html">
+            
+                <a href="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html">
+            
+                    
+                    4.2 Application of machine learning to accelerate healthcare solutions during COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.3" data-path="4.3 Hands-on learning experience training the machine to perform an action.html">
+            
+                <a href="4.3 Hands-on learning experience training the machine to perform an action.html">
+            
+                    
+                    4.3 Hands-on learning experience: training the machine to perform an action
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Chapter 5 Natural interaction Can computers understand humans and talk to them.html">
+            
+                <a href="Chapter 5 Natural interaction Can computers understand humans and talk to them.html">
+            
+                    
+                    Chapter 5 Natural interaction: Can computers understand humans and talk to them?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="5.1 Smart chatbots to answer users’ inquiries about COVID-19.html">
+            
+                <a href="5.1 Smart chatbots to answer users’ inquiries about COVID-19.html">
+            
+                    
+                    5.1 Smart chatbots to answer users’ inquiries about COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.html">
+            
+                <a href="5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.html">
+            
+                    
+                    5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="5.3 Hands-on learning experience Sentence tokenization.html">
+            
+                <a href="5.3 Hands-on learning experience Sentence tokenization.html">
+            
+                    
+                    5.3 Hands-on learning experience: Sentence tokenization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Chapter 6 Social Impact How AI will impact your life.html">
+            
+                <a href="Chapter 6 Social Impact How AI will impact your life.html">
+            
+                    
+                    Chapter 6 Social Impact: How AI will impact your life?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Conclusion.html">
+            
+                <a href="Conclusion.html">
+            
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="References.html">
+            
+                <a href="References.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Aboutus.html">
+            
+                <a href="Aboutus.html">
+            
+                    
+                    About us
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.3 Hands-on learning experience: training the machine to perform an action</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<h1 id="43-hands-on-learning-experience-training-the-machine-to-perform-an-action-">4.3 Hands-on learning experience: training the machine to perform an action <a href="https://img.shields.io/badge/Age-13%2B-9cf" data-lightbox="326ae267-7f57-4e92-ab53-eb71ef6f4887" data-title="13" target="_blank"><img src="https://img.shields.io/badge/Age-13%2B-9cf" alt="13"></a></h1>
+<p>Convolution Neural Network (CNNs) are largely applied in the domain of computer vision and have been highly successful in achieving state of the art performance on various test cases. The hidden layers in a CNN are generally convolution and pooling (downsampling) layers. In each convolution layer, we take a filter of a small size and move that filter across the image and perform convolution operations. Convolution operations are nothing but element-wise matrix multiplication between the filter values and the pixels in the image and the resultant values are summed.</p>
+<table>
+<thead>
+<tr>
+<th><strong>CNN: Convolution (/&#x2CC;k&#x252;nv&#x259;&#x2C8;lu&#x283;&#x259;n/) Neural (/&#x2C8;n&#x28A;&#x259;r&#x259;l/) Network (/ &#x2C8;n&#x25B;t&#x2CC;w&#x25C;rk/)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>CNN is a convolutional neural network is a feed-forward neural network that is generally used to analyze visual images by processing data with grid-like topology. It&#x2019;s also known as a ConvNet. Generally, a convolutional neural network is used to detect and classify objects in an image.</em></td>
+</tr>
+</tbody>
+</table>
+<p>CNN is also computationally efficient. It uses special convolution and pooling operations and performs parameter sharing. This enables CNN models to run on any device, making them universally attractive. All in this sounds like pure magic. We are dealing with a very powerful and efficient model which performs automatic feature extraction to achieve superhuman accuracy. All CNN models follow a similar architecture, as shown in Figure 25.</p>
+<p><br></p>
+<p></p><center>
+    <a href="https://md.hass.live/ai25.png" data-lightbox="63cc3664-7a10-4af7-8f59-bc0bd0b13b0b" data-title="undefined" target="_blank"><img src="https://md.hass.live/ai25.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">FFigure 25. CNN architecture</div>
+</center>
+<br><p></p>
+<p>Now, let&#x2019;s move on to pooling layers. Pooling layers are used to downsize the image. The image would contain a lot of pixel values and it is typically easy for the network to learn the features if the image size is progressively reduced. Pooling layers help in reducing the number of parameters required and hence, this reduces the computation required. Pooling also helps in avoiding overfitting. There are two types of pooling operation that could be done:</p>
+<ul>
+<li>Max Pooling &#x2014; Selecting the maximum value</li>
+<li>Average Pooling &#x2014; Sum all of the values and dividing it by the total number of values</li>
+</ul>
+<p>Before we start coding, I would like to let you know that the dataset we are going to use is the MNIST digits dataset and we are going to use the Keras library with a Tensorflow backend for building the model. Ok, enough. Let&#x2019;s do some coding.</p>
+<pre><code class="lang-python">import keras
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers import Conv2D, MaxPooling2Dimport numpy as np
+</code></pre>
+<p>First, let us do some necessary imports. The keras library helps us build our convolutional neural network. We download the mnist dataset through keras. We import a sequential model, which is a pre-built keras model where you can add the layers. We introduce the convolution and pooling layers. We also import dense layers as they are used to predict the labels. The dropout layer reduces overfitting and the flattening layer expands a three-dimensional vector into a one-dimensional vector. Finally, we import numpy for matrix operations.</p>
+<pre><code class="lang-python">batch_size = 128
+num_classes = 10
+epochs = 12
+# input image dimensions
+img_rows, img_cols = 28, 28
+# the data, split between train and test sets
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train = x_train.reshape(60000,28,28,1)
+x_test = x_test.reshape(10000,28,28,1)
+print(&apos;x_train shape:&apos;, x_train.shape)
+print(x_train.shape[0], &apos;train samples&apos;)
+print(x_test.shape[0], &apos;test samples&apos;)
+# convert class vectors to binary class matrices
+y_train = keras.utils.to_categorical(y_train, num_classes)
+y_test = keras.utils.to_categorical(y_test, num_classes)
+</code></pre>
+<p>Most of the statements in the above code would be trivial, I would just explain some lines of the code. We reshape x_train and x_test because our CNN accepts only a four-dimensional vector. The value 60000 represents the number of images in the training data, 28 represents the image size and one represents the number of channels. The number of channels is set to one if the image is in grayscale and if the image is in RGB format, the number of channels is set to three. We also convert our target values into binary class matrices. To know what binary class matrices look like take a look at the example below.</p>
+<pre><code class="lang-python">model = Sequential()
+model.add(Conv2D(32, kernel_size=(3, 3),  activation=&apos;relu&apos;, input_shape=(28,28,1)))
+model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
+model.add(Flatten())
+model.add(Dense(128, activation=&apos;relu&apos;))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes, activation=&apos;softmax&apos;))
+</code></pre>
+<p>We build a sequential model and add convolutional layers and max pooling layers to it. We also add dropout layers in between, dropout randomly switches off some neurons in the network which forces the data to find new paths. Therefore, this reduces overfitting. We add dense layers at the end which are used for class prediction(0&#x2013;9).</p>
+<pre><code class="lang-python">model.compile(loss=keras.losses.categorical_crossentropy,              optimizer=keras.optimizers.Adadelta(),  metrics=[&apos;accuracy&apos;])
+model.fit(x_train, y_train,          batch_size=batch_size,          epochs=epochs,          verbose=1,          validation_data=(x_test, y_test))
+score = model.evaluate(x_test, y_test, verbose=0)
+print(&apos;Test loss:&apos;, score[0])
+print(&apos;Test accuracy:&apos;, score[1])
+</code></pre>
+<p>We now compile the model with a categorical cross entropy loss function, Adadelta optimizer and an accuracy metric. We then fit the dataset to the model, i.e we train the model for 12 epochs. After training the model, we evaluate the loss and accuracy of the model on the test data and print it (see Figure 24).</p>
+<p><br></p>
+<p></p><center>
+    <a href="https://md.hass.live/ai26.png" data-lightbox="3083fc64-2b81-4952-82a8-27848340b54f" data-title="undefined" target="_blank"><img src="https://md.hass.live/ai26.png" alt="undefined"></a>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 1px;">Figure 26. The obtained output results</div>
+</center>
+<br><p></p>
+<h4 id="test">Test</h4>
+<p>Test the code below with username <code>yuanzhuo</code> and password <code>yuanzhuo</code>. Please choose kernel <code>conda-yuanzhuo-tf-chapter4</code>. Practice more on <a href="https://code.yuanzhuo.bnu.edu.cn/" target="_blank">Yuanzhuo Online Code Platform</a></p>
+<iframe src="https://code.yuanzhuo.bnu.edu.cn/user/yuanzhuo/notebooks/AI%20&#xFF06;%20COVID-19%20Handbook/Chap4/CNN.ipynb" width="100%" height="980" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h4 id="quiz">Quiz</h4>
+<p></p><div class="mcqx"><div id="d10dad436a7a3a3dc54d44a4de985cebbbec1786" data-config="{&quot;ans&quot;:&quot;o4&quot;,&quot;random&quot;:true,&quot;target&quot;:false,&quot;option&quot;:[{&quot;id&quot;:&quot;o1&quot;,&quot;body&quot;:&quot;It predicts future instances only when it&apos;s taught some knowledge that has been labeled in advance.&quot;},{&quot;id&quot;:&quot;o2&quot;,&quot;body&quot;:&quot;It predicts accurate patterns based on small amount of data.&quot;},{&quot;id&quot;:&quot;o3&quot;,&quot;body&quot;:&quot;It uses unstructured data to generate new patterns only if it&#x2019;s within an interactive environment.&quot;},{&quot;id&quot;:&quot;o4&quot;,&quot;body&quot;:&quot;It incorporates neural networks in successive layers in order to learn from data in an iterative manner.\r\n&lt;!--&quot;}],&quot;title&quot;:&quot;&lt;p&gt;How does deep learning work?&lt;/p&gt;\n&quot;,&quot;hint&quot;:&quot;Try Again ... --&gt;&quot;,&quot;count&quot;:4,&quot;id&quot;:&quot;d10dad436a7a3a3dc54d44a4de985cebbbec1786&quot;}" data-id="d10dad436a7a3a3dc54d44a4de985cebbbec1786" class="mcqBox gitQuestion"><div class="container-fluid"><div class="MCQtitle"><p>How does deep learning work?</p>
+</div><blockquote><p class="hint_message"></p><label class="radio-inline"><input name="d10dad436a7a3a3dc54d44a4de985cebbbec1786_group" type="radio"><b>A. </b><div class="MCQoption ansHere0"></div></label><br><label class="radio-inline"><input name="d10dad436a7a3a3dc54d44a4de985cebbbec1786_group" type="radio"><b>B. </b><div class="MCQoption ansHere1"></div></label><br><label class="radio-inline"><input name="d10dad436a7a3a3dc54d44a4de985cebbbec1786_group" type="radio"><b>C. </b><div class="MCQoption ansHere2"></div></label><br><label class="radio-inline"><input name="d10dad436a7a3a3dc54d44a4de985cebbbec1786_group" type="radio"><b>D. </b><div class="MCQoption ansHere3"></div></label><br><div class="MCQbutton"><button class="btn btn-default btn-sm submitMCQ">Submit</button><button class="btn btn-default btn-sm hintMCQ">Hint</button></div></blockquote><div class="alert MCQmessage"></div><div class="MCQdescription"></div></div></div></div><p></p>
+<p></p><div class="mcqx"><div id="a13a76a2cae3fc0032d2324cf0841ad2d3d95713" data-config="{&quot;ans&quot;:&quot;o3&quot;,&quot;random&quot;:true,&quot;target&quot;:false,&quot;option&quot;:[{&quot;id&quot;:&quot;o1&quot;,&quot;body&quot;:&quot;The hidden layers in a CNN are generally convolution and pooling (downsampling) layers.&quot;},{&quot;id&quot;:&quot;o2&quot;,&quot;body&quot;:&quot;CNN is largely applied to analyzing visual imagery.&quot;},{&quot;id&quot;:&quot;o3&quot;,&quot;body&quot;:&quot;The pooling layer of CNN is to augment samples of data.&quot;},{&quot;id&quot;:&quot;o4&quot;,&quot;body&quot;:&quot;CNN assembles complex patterns using smaller and simpler patterns.\r\n&lt;!--&quot;}],&quot;title&quot;:&quot;&lt;p&gt;Which statement about Convolution Neural Network (CNN) is not true?&lt;/p&gt;\n&quot;,&quot;hint&quot;:&quot;Try Again ... --&gt;&quot;,&quot;count&quot;:4,&quot;id&quot;:&quot;a13a76a2cae3fc0032d2324cf0841ad2d3d95713&quot;}" data-id="a13a76a2cae3fc0032d2324cf0841ad2d3d95713" class="mcqBox gitQuestion"><div class="container-fluid"><div class="MCQtitle"><p>Which statement about Convolution Neural Network (CNN) is not true?</p>
+</div><blockquote><p class="hint_message"></p><label class="radio-inline"><input name="a13a76a2cae3fc0032d2324cf0841ad2d3d95713_group" type="radio"><b>A. </b><div class="MCQoption ansHere0"></div></label><br><label class="radio-inline"><input name="a13a76a2cae3fc0032d2324cf0841ad2d3d95713_group" type="radio"><b>B. </b><div class="MCQoption ansHere1"></div></label><br><label class="radio-inline"><input name="a13a76a2cae3fc0032d2324cf0841ad2d3d95713_group" type="radio"><b>C. </b><div class="MCQoption ansHere2"></div></label><br><label class="radio-inline"><input name="a13a76a2cae3fc0032d2324cf0841ad2d3d95713_group" type="radio"><b>D. </b><div class="MCQoption ansHere3"></div></label><br><div class="MCQbutton"><button class="btn btn-default btn-sm submitMCQ">Submit</button><button class="btn btn-default btn-sm hintMCQ">Hint</button></div></blockquote><div class="alert MCQmessage"></div><div class="MCQdescription"></div></div></div></div><p></p>
+<footer class="page-footer"><span class="copyright">&#xA9; Smart Learning Institute of Beijing Normal University (SLIBNU), 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Release Date&#xFF1A;
+2022-07-08
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.html" class="navigation navigation-prev " aria-label="Previous page: 4.2 Application of machine learning to accelerate healthcare solutions during COVID-19">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="Chapter 5 Natural interaction Can computers understand humans and talk to them.html" class="navigation navigation-next " aria-label="Next page: Chapter 5 Natural interaction: Can computers understand humans and talk to them?">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"4.3 Hands-on learning experience: training the machine to perform an action","level":"1.7.3","depth":2,"next":{"title":"Chapter 5 Natural interaction: Can computers understand humans and talk to them?","level":"1.8","depth":1,"path":"content/Chapter 5 Natural interaction Can computers understand humans and talk to them.md","ref":"content/Chapter 5 Natural interaction Can computers understand humans and talk to them.md","articles":[{"title":"5.1 Smart chatbots to answer users’ inquiries about COVID-19","level":"1.8.1","depth":2,"path":"content/5.1 Smart chatbots to answer users’ inquiries about COVID-19.md","ref":"content/5.1 Smart chatbots to answer users’ inquiries about COVID-19.md","articles":[]},{"title":"5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19","level":"1.8.2","depth":2,"path":"content/5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.md","ref":"content/5.2 Utilizing natural language processing to analyze and understand the online public’s opinions and concerns towards COVID-19.md","articles":[]},{"title":"5.3 Hands-on learning experience: Sentence tokenization","level":"1.8.3","depth":2,"path":"content/5.3 Hands-on learning experience Sentence tokenization.md","ref":"content/5.3 Hands-on learning experience Sentence tokenization.md","articles":[]}]},"previous":{"title":"4.2 Application of machine learning to accelerate healthcare solutions during COVID-19","level":"1.7.2","depth":2,"path":"content/4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.md","ref":"content/4.2 Application of machine learning to accelerate healthcare solutions during COVID-19.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","flexible-alerts","advanced-emoji","chapter-fold","code","mcqx","fbqx","spoiler","youtubex","splitter","search-pro","sectionx","klipse","pageview-count","hide-element","popup","sharing-plus","latex-codecogs","lightbox","expandable-chapters-small","-highlight","theme-comscore","baidu-tongji","tbfed-pagefooter","flexible-alerts","js-sequence-diagram-full@>=0.3.1","-sharing","theme-fexa"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Smart Learning Institute of Beijing Normal University (SLIBNU), 2020","modify_label":"Release Date：","modify_format":"YYYY-MM-DD"},"latex-codecogs":{"type":"gif"},"chapter-fold":{},"spoiler":{},"fbqx":{},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"8eb90132f665eaecfd1fe05951de80d3"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"theme-fexa":{"search-placeholder":"","logo":"./logo.png"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes Video:","default":"Embedded video:"}},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":true,"weibo":false,"twitter":true,"pocket":true,"google":false,"qzone":false,"linkedin":true},"mcqx":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"BNUSLI","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://yuanzhuo.bnu.edu.cn/actionbook","target":"_blank","name":"Home"},{"url":"https://yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Resource Platform"},{"url":"https://code.yuanzhuo.bnu.edu.cn","target":"_blank","name":"Yuanzhuo Online Code Platform"},{"url":"http://yuanzhuo.bnu.edu.cn/article/category/datasets","target":"_blank","name":"Datasets"}]}},"title":"ActionBook","language":"en","gitbook":"3.2.2","description":"Interactive Book on Artificial Intelligence"},"file":{"path":"content/4.3 Hands-on learning experience training the machine to perform an action.md","mtime":"2022-07-08T02:21:05.994Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2022-07-08T02:39:30.540Z"},"basePath":"..","book":{"language":"ai_handbook"}});
+		});
+	</script>
+</div>
+
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/js.cookie.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mcqx/mcqx.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fbqx/fbqx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+
+    </body>
+</html>
+

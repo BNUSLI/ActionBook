@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "graceful-fs": "^4.2.10"
+  },
+  "dependencies": {
+    "gitbook-plugin-lightbox": "^1.2.0",
+    "gitbook-plugin-mygitalk": "^0.2.6"
+  }
+}
